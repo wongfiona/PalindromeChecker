@@ -16,7 +16,15 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
+  if (reverse(word) == word)
+    return true;
   return false;
+}
+public String reverse(String str)
+{
+  String s = new String();
+  for (int i = str.length()-1; i >= 0; i--)
+    s = s + str.substring(i,i+1);
+  return s;
 }
 
