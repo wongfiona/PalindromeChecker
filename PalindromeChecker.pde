@@ -22,13 +22,11 @@ public boolean palindrome(String word)
     if (Character.isLetter(word.charAt(i)))
       s = s + word.charAt(i);
   }
-  int j = s.length()-1;
-  for (int x = 0; x < s.length() - 1; x++)
+  s = s.toLowerCase();
+  for (int j = 0; j < s.length() / 2; j++)
   {
-    if (s.toLowerCase().charAt(j) == s.toLowerCase().charAt(x))
-      j--;
+    if (s.charAt(j) != s.charAt(s.length() - (i+1)))
+      return false;
   }
-  if (j == 0)
-    return true;
-  return false;
+  return true;
 }
