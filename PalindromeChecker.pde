@@ -25,7 +25,7 @@ public boolean palindrome(String word)
   s = s.toLowerCase();
   for (int j = 0; j < s.length() / 2; j++)
   {
-    if (s.charAt(j) != s.charAt(s.length() - (i+1)))
+    if (s.charAt(j) != s.charAt(s.length() - (j+1)))
       return false;
   }
   return true;
